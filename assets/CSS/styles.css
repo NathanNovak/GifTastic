@@ -1,6 +1,17 @@
+
+body{
+    background-color: beige;
+}
+
+p{
+    margin: 0px;
+    font-family: 'Jua', sans-serif;
+    font-size: 22px;
+}
+
 .newButton{
     margin: 10px 5px 5px 0px ;
-    
+    justify-content: center;
 }
 
 #gifDiv{
@@ -11,9 +22,6 @@
     flex-wrap: wrap; */
     
     /* justify-content: space-around; */
-
-
-
 }
 .gifImages{
     float: left;
@@ -23,10 +31,10 @@
     padding: 15px;
 }
 
-#gif-view{
-        
+.input{
+    justify-content: center;   
+    padding: 35px 0px 25px 0px; 
 }
-
 
 .container{
     margin-left: 100px;
@@ -34,10 +42,13 @@
     display: grid;
     /* flex-flow: wrap; */
 }
-#button-view{
-
+#topic-label{
+    margin: 15px 15px 0px 0px;
 }
-
 .eachGif{
     float: left;
+    background-color: black;
+    color: aliceblue;
+    font-family: 'Jua', sans-serif;
+
 }
