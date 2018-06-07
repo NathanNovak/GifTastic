@@ -1,9 +1,43 @@
 .newButton{
     margin: 10px 5px 5px 0px ;
+    
 }
 
-.col-md-9{
-    float: left;
-    width: 33.33%;
+#gifDiv{
+    /* position: absolute; */
     padding: 5px;
+    display: block;
+    /* display: flex;
+    flex-wrap: wrap; */
+    
+    /* justify-content: space-around; */
+
+
+
+}
+.gifImages{
+    float: left;
+    height: 300px;
+    width: 300px;
+    /* margin: auto; */
+    padding: 15px;
+}
+
+#gif-view{
+        
+}
+
+
+.container{
+    margin-left: 100px;
+    margin-right: 100px;
+    display: grid;
+    /* flex-flow: wrap; */
+}
+#button-view{
+
+}
+
+.eachGif{
+    float: left;
 }

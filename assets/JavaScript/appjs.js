@@ -2,8 +2,6 @@
 //initial array of topics
 var gifs = [];
 
-
-
 //button is rendered on the top of the screen with selected animal
 $('#submit').on('click', function () {
   event.preventDefault();
@@ -16,10 +14,8 @@ $('#submit').on('click', function () {
   //clears the input box
   $('input').val('');
   renderButton();
-
-
-
 });
+
 //each new input and submit renders and appends a new button
 function renderButton() {
   //empties the div so the new buttons can append without repeat
@@ -29,25 +25,18 @@ function renderButton() {
 
     var gifButtons = $('<button>');
 
-
     gifButtons.addClass('btn btn-primary newButton');
-
+    
     gifButtons.attr('data_name', gifs[i]);
-
 
     gifButtons.text(gifs[i]);
     $('#button-view').append(gifButtons);
     console.log(gifs[i]);
-
-
   }
-
-
-
 }
+
 //user can click on the buttons and it will call for a response
 $(document).on('click', '.newButton', function () {
-
 
   var chosenGifs = $(this).attr('data_name');
   var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=Xk431AeNbIzBbsXzkM8eIOvOHXENtz1N&q=" + chosenGifs + "&limit=10&offset=0&rating=R&lang=en";
@@ -57,7 +46,6 @@ $(document).on('click', '.newButton', function () {
     method: 'GET'
   }).then(function (response) {
 
-
     console.log(response);
 
     var results = response.data;
@@ -65,10 +53,13 @@ $(document).on('click', '.newButton', function () {
     for (var i = 0; i < results.length; i++) {
 
       var resultsDiv = $('<div>');
+      //made class for div to float the gifs left and get them inline.
+      resultsDiv.addClass('eachGif');
       var p = $('<p>').text("Rating: " + results[i].rating);
       console.log(p);
 
       var imgForGifs = $('<img>');
+      imgForGifs.addClass('gifImages');
       imgForGifs.attr({src: results[i].images.fixed_height_still.url, 
         data_state: "still",
         data_still: results[i].images.fixed_height_still.url,
